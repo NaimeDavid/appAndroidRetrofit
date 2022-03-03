@@ -1,5 +1,6 @@
 package br.com.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,13 +20,17 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             val newText = editText.text.toString()
             if (newText.isNotBlank()) {
-                //Se não tá em branco, o 'text' recebe o conteudo no originText
-                originText.text = "Olá "+ newText+" !"
+               originText.text = "Olá "+ newText+" !"
 
             }else{
                 editText.error = "Digite seu nome aqui"
             }
 
+        newButton.setOnClickListener {
+            val intentOpenNewActivity = Intent(this, SecondActivity::class.java)
+            intentOpenNewActivity.putExtra("TEXTO_DIGITADO", editText.text.toString())
+            startActivity(intentOpenNewActivity)
+        }
         }
     }
 }

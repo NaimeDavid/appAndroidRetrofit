@@ -2,10 +2,23 @@ package br.com.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+
+        val textResult = findViewById<TextView>(R.id.textResult)
+        val btVoltar = findViewById<Button>(R.id.buttonVoltar)
+
+        val receivedText = intent.getStringExtra("TEXTO_DIGITADO")
+        textResult.text = receivedText
+
+        btVoltar.setOnClickListener {
+            finish()
+        }
     }
+
 }
