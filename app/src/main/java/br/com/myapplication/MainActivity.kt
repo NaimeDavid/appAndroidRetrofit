@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val originText = findViewById<TextView>(R.id.textOi)
         val editText = findViewById<EditText>(R.id.editTextTextPersonName)
         val button = findViewById<Button>(R.id.button)
+        val newButton = findViewById<Button>(R.id.button2)
 
         button.setOnClickListener {
             val newText = editText.text.toString()
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 editText.error = "Digite seu nome aqui"
             }
+
         }
     }
 }
