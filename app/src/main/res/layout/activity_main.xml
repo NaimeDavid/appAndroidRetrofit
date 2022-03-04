@@ -15,7 +15,7 @@
         android:layout_marginEnd="20dp"
         android:text="Olá ;D"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -45,23 +45,48 @@
         android:ems="10"
         android:hint="Digite seu nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textOi" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:id="@+id/buttonAvSecond"
+
+        android:layout_width="110dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="372dp"
+        android:background="@drawable/buttonshape"
         android:text="Avançar"
         app:backgroundTint="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMap"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnviar"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Button
+        android:id="@+id/buttonMap"
+        android:layout_width="110dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="372dp"
+        android:background="@drawable/buttonshape"
+        android:text="Abrir mapa"
+        android:textColor="#FFFAFB"
+        android:textSize="15sp"
+        app:backgroundTint="#9C27B0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonAvSecond"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnviar"
+        app:layout_constraintVertical_bias="0.363" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

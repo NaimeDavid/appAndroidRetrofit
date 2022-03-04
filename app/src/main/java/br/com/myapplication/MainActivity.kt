@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         val originText = findViewById<TextView>(R.id.textOi)
         val editText = findViewById<EditText>(R.id.editTextTextPersonName)
-        val button = findViewById<Button>(R.id.button)
-        val newButton = findViewById<Button>(R.id.button2)
+        val button = findViewById<Button>(R.id.buttonEnviar)
+        val newButton = findViewById<Button>(R.id.buttonAvSecond)
 
         button.setOnClickListener {
             val newText = editText.text.toString()
